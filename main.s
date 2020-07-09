@@ -2,7 +2,6 @@
 .arm
 _start:
 	b _copy_to_iwram
-	@ TODO: header.
 
 .org 0xE0
 _copy_to_iwram:
