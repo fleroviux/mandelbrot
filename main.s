@@ -7,11 +7,9 @@ _start:
 _copy_to_iwram:
 	mov r0, #0x08000000
 	mov r1, #0x03000000
-	@ FIXME: make this go brr
 	ldr r2, =_end
 	lsr r2, #2
-	orr r2, #0x80000000
-	orr r2, #0x04000000
+	orr r2, #0x84000000
 	ldr r3, =0x040000D4
 	stmia r3, {r0-r2}
 	ldr r0, =(main + 0x03000000)
