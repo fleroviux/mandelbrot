@@ -28,7 +28,7 @@ main:
 	ldr r2, =#0x80000014
 	stmia r3, {r0-r2}	
 	
-	@ r0 = vram pointer, r1 = red
+	@ r0 = vram pointer
 	mov r0, #0x06000000
 
 	@ r3 = y-counter
